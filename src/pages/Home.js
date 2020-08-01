@@ -12,7 +12,7 @@ export const Home = () => {
            <div className="row">
                {cards.map(card => {
                    return  (
-                       <div className="col-sm-4" key={card}>
+                       <div className="col-sm-4 mb-4" key={card}>
                            <Card />
                        </div>
                    )

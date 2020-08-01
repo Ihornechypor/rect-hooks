@@ -8,7 +8,7 @@ export const Card = () => (
             <h5 className="card-title">
                 React js
             </h5>
-            <Link to={'/profile/' + 'react'} className="btn btn-primary">
+            <Link to={'/profile/'} className="btn btn-primary">
                 Open
             </Link>
         </div>
