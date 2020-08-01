@@ -1,9 +1,11 @@
 import React, {useContext, useState} from "react";
 import {AlertContext} from "../context/AlertContext";
+import {GithubContext} from "../context/github/githubContext";
 
 export const Search = () => {
     const [value, setValue] = useState('')
     const {show} = useContext(AlertContext);
+    const gitHub = useContext(GithubContext);
 
     const onSubmit = event => {
         if(event.key !== 'Enter'){
@@ -11,6 +13,7 @@ export const Search = () => {
         }
 
         if(value.trim()){
+            gitHub.search(value.trim())
             console.log('request')
         } else {
             show('Enter user data')
